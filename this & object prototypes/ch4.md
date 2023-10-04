@@ -294,7 +294,7 @@ var Car = mixin( Vehicle, {
 
 Vamos examinar essa instrução: `Vehicle.drive.call(this)`. Isso é o que eu chamo de "pseudo-polimorfismo explícito". Lembre-se que no nosso pseudo-código anterior, essa linha era `inherited:drive()`, que nós chamamos de "polimorfismo relativo".
 
-O JavaScript não tem (antes do ES6; veja apêndice A) um utilitário para o polimorfismo relativo. Então, **já que `Car` e `Vehicle` tinahm uma função com o mesmo nome: `drive()`**, para distinguir uma chamada de um ou outra, temos de fazer uma referência absoluta (não relativa). Nós explicitamente especificamos o objeto `Vehicle` pelo nome, e chamamos a função `drive()` nele.
+O JavaScript não tem (antes do ES6; veja apêndice A) um utilitário para o polimorfismo relativo. Então, **já que `Car` e `Vehicle` tinham uma função com o mesmo nome: `drive()`**, para distinguir uma chamada de um ou outra, temos de fazer uma referência absoluta (não relativa). Nós explicitamente especificamos o objeto `Vehicle` pelo nome, e chamamos a função `drive()` nele.
 
 Mas se dissermos `Vehicle.drive`, o binding do `this` para essa função será o objeto `Vehicle` em vez do objeto `Car` (veja o capítulo 2), o que não é o que queremos. Então, em vez disso usamos `.call( this )`(capítulo 2) para garantir que `drive()` seja executado no contexto do objeto `Car`.
 
