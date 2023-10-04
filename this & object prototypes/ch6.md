@@ -96,7 +96,7 @@ Neste código, `Task` e `XYZ` não são classes (ou funções), eles são **apen
 
 Em comparação com orientação à classes (também conhecido como OO -- orientado à objetos), eu chamo esse estilo de código de **"OLOO"** (objetos-ligados-à-outros-objetos). Tudo que *realmente* nos importa é que o objeto `XYZ` delega para o objeto `Task` (assim como também faz o objeto `ABC`).
 
-Em Javascript, o mecânismo `[[Prototype]]` liga **objetos** com outros **objetos**. Não há mecânismos abstratos como "classes" não importa o quanto tentarem te convencer do contrário. É como remar uma canoa rio acima: você *pode* fazer isso, mas se você estará *escolhendo* ir contra a corrente natural, então obviamente **será muito mais difícil de se chegar onde estiver indo.**
+Em Javascript, o mecânismo `[[Prototype]]` liga **objetos** com outros **objetos**. Não há mecanismos abstratos como "classes" não importa o quanto tentarem te convencer do contrário. É como remar uma canoa rio acima: você *pode* fazer isso, mas se você estará *escolhendo* ir contra a corrente natural, então obviamente **será muito mais difícil de se chegar onde estiver indo.**
 
 Algumas outras diferenças para se notar com o **código no estilo OLOO**:
 
