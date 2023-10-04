@@ -1,17 +1,17 @@
 # You Don't Know JS: *this* & Prototipagem de Objetos
 # Capítulo 6: Delegação de Comportamentos
 
-No Capítulo 5, nós abordamos detalhadamente o mecânismo `[[Prototype]]`, e o *porquê* de ser confuso e inapropriado (apesar das incontáveis tentativas por quase duas décadas) descrevê-lo como "classe" ou "herança". Vimos à fundo não só sua síntaxe razoavelmente prolixa (`.prototype` sujando o código), mas também as armadilhas (como a surpreendente resolução de `.constructor` ou a horrível síntaxe pseudo-polimórfica). E exploramos as variações da abordagem "mixin", que muitas pessoas utilizam para tentar suavizar áreas mais pesadas.
+No Capítulo 5, nós abordamos detalhadamente o mecanismo `[[Prototype]]`, e o *porquê* de ser confuso e inapropriado (apesar das incontáveis tentativas por quase duas décadas) descrevê-lo como "classe" ou "herança". Vimos à fundo não só sua síntaxe razoavelmente prolixa (`.prototype` sujando o código), mas também as armadilhas (como a surpreendente resolução de `.constructor` ou a horrível síntaxe pseudo-polimórfica). E exploramos as variações da abordagem "mixin", que muitas pessoas utilizam para tentar suavizar áreas mais pesadas.
 
 É uma reação comum à essa altura imaginar qual a necessidade de ser tão complexo algo que parece ser tão simples de ser feito. Agora que abaixamos as cortinas e vimos o quão poluído o código fica, não é uma surpresa a maioria dos desenvolvedores JS nunca mergulharem tão fundo, e ao invés disso relegarem  toda a bagunça para uma biblioteca de "classes" cuidar para eles.
 
-Eu espero que agora você não se contente em encobrir e deixar tais detalhes para uma biblioteca "caixa preta" cuidar. Vamos ver à seguir como nós *podemos e devemos* pensar sobre o mecânismo do objeto `[[Prototype]]` em JS, de uma **forma muito mais simples e direta** que a confusão de classes.
+Eu espero que agora você não se contente em encobrir e deixar tais detalhes para uma biblioteca "caixa preta" cuidar. Vamos ver à seguir como nós *podemos e devemos* pensar sobre o mecanismo do objeto `[[Prototype]]` em JS, de uma **forma muito mais simples e direta** que a confusão de classes.
 
-Como uma breve revisão de nossas conclusões do Capítulo 5, o mecânismo `[[Prototype]]` é uma ligação interna que existe em um objeto que referencia outro objeto.
+Como uma breve revisão de nossas conclusões do Capítulo 5, o mecanismo `[[Prototype]]` é uma ligação interna que existe em um objeto que referencia outro objeto.
 
 Essa ligação é exercida quando uma referência de uma propriedade/método é feita contra o primeiro objeto, e tal propriedade/método não existe. Neste caso, a ligação `[[Prototype]]` diz ao motor para buscar pela propriedade/método no objeto que está ligado. Por sua vez, caso o objeto não consiga completar a busca, seu `[[Prototype]]` é seguido, e assim por diante. Essa série de ligações entre formas de objetos é chamada de "cadeia de protótipos".
 
-Em outras palavras, o mecânismo atual, a essência do que é importante para a funcionalidade do que podemos fazer com JavaScript, se resume à **objetos sendo ligados à outros objetos.**
+Em outras palavras, o mecanismo atual, a essência do que é importante para a funcionalidade do que podemos fazer com JavaScript, se resume à **objetos sendo ligados à outros objetos.**
 
 Essa observação por si só é fundamental e crítica para entender as motivações e abordagens ao longo deste capítulo!
 
@@ -96,7 +96,7 @@ Neste código, `Task` e `XYZ` não são classes (ou funções), eles são **apen
 
 Em comparação com orientação à classes (também conhecido como OO -- orientado à objetos), eu chamo esse estilo de código de **"OLOO"** (objetos-ligados-à-outros-objetos). Tudo que *realmente* nos importa é que o objeto `XYZ` delega para o objeto `Task` (assim como também faz o objeto `ABC`).
 
-Em Javascript, o mecânismo `[[Prototype]]` liga **objetos** com outros **objetos**. Não há mecanismos abstratos como "classes" não importa o quanto tentarem te convencer do contrário. É como remar uma canoa rio acima: você *pode* fazer isso, mas se você estará *escolhendo* ir contra a corrente natural, então obviamente **será muito mais difícil de se chegar onde estiver indo.**
+Em Javascript, o mecanismo `[[Prototype]]` liga **objetos** com outros **objetos**. Não há mecanismos abstratos como "classes" não importa o quanto tentarem te convencer do contrário. É como remar uma canoa rio acima: você *pode* fazer isso, mas se você estará *escolhendo* ir contra a corrente natural, então obviamente **será muito mais difícil de se chegar onde estiver indo.**
 
 Algumas outras diferenças para se notar com o **código no estilo OLOO**:
 
