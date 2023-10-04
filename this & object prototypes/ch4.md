@@ -184,7 +184,7 @@ class SpeedBoat inherits Vehicle {
 
 Nós definimos a classe `Veiculo` para que ela assumisse um motor, a forma de ligar a ignição e uma maneira de dirigir. Mas você não fabricaria um veículo genérico, então até esse ponto ela é um conceito abstrato.
 
-Então, definimos dosi tipos específicos de veículos: `Carro` e `SpeedBoat`. Ambos herdam as características gerais de `Veiculo`, mas especializam características apropriadamente para cada tipo. Um carro precisa de 4 rodas, e um SpeedBoat de dois motores, o que significa que é preciso atenção extra para ligar a ignição de ambos motores.
+Então, definimos dois tipos específicos de veículos: `Carro` e `SpeedBoat`. Ambos herdam as características gerais de `Veiculo`, mas especializam características apropriadamente para cada tipo. Um carro precisa de 4 rodas, e um SpeedBoat de dois motores, o que significa que é preciso atenção extra para ligar a ignição de ambos motores.
 
 ### Polimorfismo
 
