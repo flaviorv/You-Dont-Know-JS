@@ -175,7 +175,7 @@ var a = new Foo();
 Object.getPrototypeOf( a ) === Foo.prototype; // true
 ```
 
-Quando `a` é criado ao chamar `new Foo()`, uma das coisas (ceja Capítulo 2 para todos os *quatro* passos) que acontecem é que `a` obtêm uma ligação `[[Prototype]]` interna com o objeto que `Foo.prototype` está apontando.
+Quando `a` é criado ao chamar `new Foo()`, uma das coisas (veja Capítulo 2 para todos os *quatro* passos) que acontecem é que `a` obtêm uma ligação `[[Prototype]]` interna com o objeto que `Foo.prototype` está apontando.
 
 Pare um momento e pondere as implicações desta declaração.
 
