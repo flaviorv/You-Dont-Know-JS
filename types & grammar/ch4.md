@@ -1348,7 +1348,7 @@ Algumas pequenas exceções à expectativa normal para estar ciente são:
 
 A última provisão na cláusula 11.9.3.1 é para comparação de igualdade ampla `==` com `object`s (incluindo `function`s e `array`s). Tais valores são apenas *iguais* se ambos referenciam para *exatamente o mesmo valor*. Não ocorre coerção aqui.
 
-**Observação:** A comparação de igualdade estrita `===` é definida identicamente para 11.9.3.1, incluindo a provisão sobre dois valores de `objects`. É um fato pouco conhecido que **`==` e `===` se comportam de forma idêntica** no caso inde dois `objects`s estão sendo comparados.
+**Observação:** A comparação de igualdade estrita `===` é definida identicamente para 11.9.3.1, incluindo a provisão sobre dois valores de `objects`. É um fato pouco conhecido que **`==` e `===` se comportam de forma idêntica** no caso onde dois `objects`s estão sendo comparados.
 
 O resto do algoritmo em 11.9.3. especifica qur se você usar igualdade ampla `==` para comparar dois valores de tipos diferentes, um ou ambos os valores precisarão sofrer coerção *implícita*. Essa coerção acontece para que ambos valores eventualmente terminem com o mesmo tipo, no qual possam ser comparados pela igualdade usando valores de identidade simples.
 
